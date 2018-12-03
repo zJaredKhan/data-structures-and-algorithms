@@ -107,6 +107,8 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.lastName.toUpperCase() > b.lastName.toUpperCase())
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,6 +123,18 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  arr.sort(function(a,b){
+    if(a.lastName === b.lastName){
+        if(a.firstName === b.firstName){
+            return a.age-b.age;
+        } else{
+            return a.firstName > b.firstName;
+        }
+    } else {
+      return a.lastName > b.lastName;
+    }
+})
+return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
