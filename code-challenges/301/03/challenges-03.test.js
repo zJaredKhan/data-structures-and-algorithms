@@ -69,6 +69,8 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.price - b.price)
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +83,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.toString().length - b.toString().length)
+  return arr
 };
 
 /*-----------------------------------------------------------------------------------------------
